@@ -1,0 +1,86 @@
+body, html {
+    background-color: #0B0B0B;
+    cursor: url(images/cursor.png), auto;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#logo {
+    height: 75px;
+    margin-top: 20px;
+}
+
+hr {
+    width: 410px;
+    margin-top: 22px;
+    border: 2px solid #1a1a1a;
+    border-radius: 2rem;
+}
+
+.title {
+    color: #FFF;
+    font-family: "Dela Gothic One";
+    font-size: 48px;
+    margin-top: 10px;
+    z-index: 2;
+}
+
+.title::before {
+    content: "PORTFOLIO";
+    border-bottom: 20px solid #1a1a1a;
+    position: absolute;
+    margin-left: -10px;
+    transform: translateY(-20px);
+    padding-inline: 10px;
+    color: transparent;
+    z-index: -1;
+}
+
+.button {
+    color: white;
+    border: 1px solid #222222;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 20px; 
+    border-bottom-width: 3px;
+    transition: 300ms;
+    margin-bottom: 10px
+}
+
+.button:hover .btn-title {
+    font-size: 40px;
+    margin-top: 200px;
+}
+
+.btn-title {
+    color: #FFF;
+    font-family: "Dela Gothic One";
+    font-size: 32px;
+    margin-top: 90px;
+    transition: 300ms;
+    margin-bottom: 25px;
+}
+
+.btn-desc {
+    margin-top: -25px;
+    color: #FFFFFF70;
+    font-family: Inter;
+    margin-bottom: 0px;
+}
+
+#osc {
+    background-image: linear-gradient(0deg, #0b0b0b 30%, #0b0b0b00, #0b0b0b), url('images/TAT.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#websites {
+    background-image: linear-gradient(0deg, #0b0b0b 30%, #0b0b0b00, #0b0b0b), url('images/website.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-x;
+}

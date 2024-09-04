@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<script>
+    function hasTouch() {
+        return 'ontouchstart' in document.documentElement
+                || navigator.maxTouchPoints > 0
+                || navigator.msMaxTouchPoints > 0;
+        }
+
+    if (hasTouch()) { // remove all the :hover stylesheets
+        try { // prevent exception on browsers not supporting DOM styleSheets properly
+            for (var si in document.styleSheets) {
+            var styleSheet = document.styleSheets[si];
+            if (!styleSheet.rules) continue;
+
+            for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+                if (!styleSheet.rules[ri].selectorText) continue;
+
+                if (styleSheet.rules[ri].selectorText.match(':hover')) {
+                styleSheet.deleteRule(ri);
+                }
+            }
+            }
+        } catch (ex) {}
+    }
+</script>
+<body>
+    <div class="container">
+        <img src="images/debuggyicon.png" id="logo">
+        <hr>
+        <p class="title">PORTFOLIO</p>
+        <div class="button" id="osc">
+            <p class="btn-title">OSC</p>
+            <p class="btn-desc">Art I have made for the Object Show Community, mainly my own camp “Twists and Turns”.</p>
+        </div>
+        <div class="button" id="websites">
+            <p class="btn-title">Websites</p>
+            <p class="btn-desc">Websites that I have made either for my own projects, school projects
+                or other projects, such as ToEndAllWars or Twists and Turns.</p>
+        </div>
+    </div>
+</body>
