@@ -1,0 +1,87 @@
+<!doctype html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet"
+    />
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=computer,person,tv,work"
+    />
+    <link rel="icon" href="images/favicon.png" />
+    <title>debuggyo - About Me</title>
+    <!-- 8efc9137-a09f-4ae6-a462-3774472b2fcb -->
+</head>
+<script>
+    function hasTouch() {
+        1;
+        return (
+            "ontouchstart" in document.documentElement ||
+            navigator.maxTouchPoints > 0 ||
+            navigator.msMaxTouchPoints > 0
+        );
+    }
+
+    if (hasTouch()) {
+        // remove all the :hover stylesheets
+        try {
+            // prevent exception on browsers not supporting DOM styleSheets properly
+            for (var si in document.styleSheets) {
+                var styleSheet = document.styleSheets[si];
+                if (!styleSheet.rules) continue;
+
+                for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+                    if (!styleSheet.rules[ri].selectorText) continue;
+
+                    if (styleSheet.rules[ri].selectorText.match(":hover")) {
+                        styleSheet.deleteRule(ri);
+                    }
+                }
+            }
+        } catch (ex) {}
+    }
+</script>
+<body>
+    <header>
+        <a class="tab" href="/">
+            <span class="m3-icon">work</span>
+            Projects
+        </a>
+        <a class="tab active" href="aboutme.html">
+            <span class="m3-icon">person</span>
+            About Me
+        </a>
+    </header>
+    <div class="container">
+        <img src="images/debuggylogo.png" id="logo" />
+        <hr />
+        <p class="title">About Me</p>
+        <hr />
+        <h1 class="section-header">Interests</h1>
+        <div class="section">
+            <div class="text">
+                <h2><span class="m3-icon">computer</span>Linux</h2>
+                <p>
+                    I have been using Linux as my daily operating system since
+                    2021, since then I have gone through many distros, many
+                    desktops, and many different styles.
+                </p>
+                <p>
+                    My biggest Linux related project is Exo, a desktop shell for
+                    the Niri and Hyprland Wayland Compositors.
+                </p>
+            </div>
+            <div class="text">
+                <h2><span class="m3-icon">tv</span>Tokusatsu</h2>
+                <p>
+                    I have been watching Tokusatsu shows since late 2023,
+                    especially Kamen Rider.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
